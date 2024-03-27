@@ -1,47 +1,67 @@
-body {
-  background-color: #333;
-  color: #fff;
-  font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body and general styles */
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header and navigation */
 header {
-  background-color: #222;
-  padding: 20px 0;
-  text-align: center; /* Center align the content */
+  background-color: #111;
+  padding: 1rem;
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-block; /* Set the ul to inline-block */
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
+nav a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ccc;
+nav a:hover {
+  color: #f5a623;
 }
 
+/* Main content */
 main {
-  padding: 20px;
+  padding: 2rem;
 }
 
+/* Section headings */
+h1, h2, h3 {
+  color: #f5a623;
+}
+
+/* Services section */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
 footer {
-  background-color: #222;
-  color: #ccc;
+  background-color: #111;
   text-align: center;
-  padding: 10px 0;
+  padding: 1rem;
 }
 
+footer p {
+  color: #ffffff;
+}
+
+/* Form styles */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -51,32 +71,37 @@ input[type="text"],
 input[type="tel"],
 textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #777;
-  border-radius: 5px;
-  resize: vertical; /* Allow vertical resizing */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #ffffff;
 }
 
 input[type="submit"] {
-  background-color: #444;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #f5a623;
+  color: #111;
   border: none;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #666;
+  background-color: #e69100;
 }
 
-/* Limit character count */
-textarea:invalid {
-  border-color: red;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Hide the browser's default invalid state */
-textarea:invalid + span {
-  display: none;
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  
 }
