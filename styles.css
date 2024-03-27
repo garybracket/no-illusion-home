@@ -7,12 +7,14 @@ body {
 header {
   background-color: #222;
   padding: 20px 0;
+  text-align: center; /* Center align the content */
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: inline-block; /* Set the ul to inline-block */
 }
 
 nav ul li {
@@ -46,12 +48,14 @@ form {
 }
 
 input[type="text"],
-input[type="tel"] {
+input[type="tel"],
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #777;
   border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing */
 }
 
 input[type="submit"] {
@@ -67,15 +71,6 @@ input[type="submit"]:hover {
   background-color: #666;
 }
 
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #777;
-  border-radius: 5px;
-  resize: vertical; /* Allow vertical resizing */
-}
-
 /* Limit character count */
 textarea:invalid {
   border-color: red;
@@ -85,5 +80,3 @@ textarea:invalid {
 textarea:invalid + span {
   display: none;
 }
-
-/* Other styles... */
