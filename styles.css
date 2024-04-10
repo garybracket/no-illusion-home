@@ -1,7 +1,7 @@
 /* --------------Header and navigation-------------- */
 header {
   background-color: #111;
-  padding: 1rem;
+  padding: 0.5rem; /* Reduced padding */
 }
 
 nav ul {
@@ -12,7 +12,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s ease;
 }
 
