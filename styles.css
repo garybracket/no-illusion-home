@@ -1,31 +1,56 @@
 /* --------------Header and navigation-------------- */
 header {
-  background-color: #111;
-  padding: 0.5rem; /* Reduced padding */
+  background-color: #000000;
+  padding: 0.25rem; /* Reduced padding */
+  text-align: center; /* Center align the content */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center the list */
+  padding: 0; /* Remove default padding */
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease;
+  padding: 0.5rem 1rem; /* Adjusted padding */
+  font-size: 0.75rem;
+  background-color: #333; /* Example background color for the pill */
+  border-radius: 50px; /* Rounded corners for the pill shape */
+  margin: 0 0.25rem; /* Spacing between the pills */
 }
 
 nav a:hover {
   color: #f5a623;
+  background-color: #555; /* Slightly darker background on hover */
 }
+
+/* Media query for desktop view */
+@media (min-width: 768px) {
+  header {
+    padding: 0.5rem; /* Increased padding for desktop */
+  }
+
+  nav ul {
+    justify-content: space-around; /* Spread items out more */
+  }
+
+  nav a {
+    padding: 0.5rem 1.5rem; /* Larger padding for desktop */
+    font-size: 0.9rem; /* Larger font size for desktop */
+  }
+}
+
 
 /* --------------Main Website Layout------------------- */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #ffffff;
-  background-color: #121212;
+  background-color: #131212;
   margin: 0;
   padding: 0;
 }
