@@ -112,54 +112,62 @@
                 </div>
                 
                 <!-- FormSubmit.co Form -->
-                <form action="https://formsubmit.co/admin@no-illusion.com" method="POST" class="p-6 space-y-6" id="contactForm">
-                    <!-- FormSubmit.co Configuration -->
-                    <input type="hidden" name="_subject" value="New Contact Form Submission - No Illusion">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-                    <!-- Use FormSubmit's built-in thank you page -->
-                    <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
-                    <input type="hidden" name="_autoresponse" value="Thank you for contacting No Illusion. Your message has been received and I'll respond within 24-48 hours.">
-                    
-                    <!-- Form Fields -->
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
-                    </div>
-                    
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
-                    </div>
-                    
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Description (max 5000 characters)</label>
-                        <p class="text-xs text-gray-400 mb-2">What exactly do you need or want done? What is your estimated budget? Do you need a product, or do you need general consulting?</p>
-                        <textarea id="message" name="message" rows="6" maxlength="5000" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"></textarea>
-                    </div>
-                    
-                    <div>
-                        <button type="submit" id="submitButton" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                            Submit
-                        </button>
-                    </div>
-                    
-                    <!-- Loading state handling -->
-                    <script>
-                        document.getElementById('contactForm').addEventListener('submit', function() {
-                            const button = document.getElementById('submitButton');
-                            button.innerHTML = 'Sending...';
-                            button.disabled = true;
-                            
-                            // Re-enable button after 8 seconds in case of issues
-                            setTimeout(function() {
-                                button.innerHTML = 'Submit';
-                                button.disabled = false;
-                            }, 8000);
-                        });
-                    </script>
-                </form>
+                <!-- Replace the form section in your contact.html file with this -->
+
+<form action="https://formsubmit.co/admin@no-illusion.com" method="POST" class="p-6 space-y-6" id="contactForm">
+    <!-- FormSubmit.co Configuration -->
+    <input type="hidden" name="_subject" value="New Contact Form Submission - No Illusion">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+    <input type="hidden" name="_api_key" value="null">
+    <input type="hidden" name="_webhook" value="">
+    
+    <!-- Form Fields -->
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+        <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+    </div>
+    
+    <div>
+        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+    </div>
+    
+    <div>
+        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Description (max 5000 characters)</label>
+        <p class="text-xs text-gray-400 mb-2">What exactly do you need or want done? What is your estimated budget? Do you need a product, or do you need general consulting?</p>
+        <textarea id="message" name="message" rows="6" maxlength="5000" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"></textarea>
+    </div>
+    
+    <div>
+        <button type="submit" id="submitButton" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+            Submit
+        </button>
+    </div>
+    
+    <div class="mt-4 p-4 bg-amber-900/20 border border-amber-700/30 rounded-md">
+        <p class="text-amber-200 text-sm">Note: If the form submission doesn't work, you can also email me directly at <a href="mailto:admin@no-illusion.com" class="text-primary underline">admin@no-illusion.com</a></p>
+    </div>
+</form>
+
+<!-- Add this script to handle form submission -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Show loading state
+        const button = document.getElementById('submitButton');
+        button.innerHTML = 'Sending...';
+        button.disabled = true;
+        
+        // Set a timeout to reset the button if the form hangs
+        setTimeout(function() {
+            button.innerHTML = 'Submit';
+            button.disabled = false;
+        }, 10000); // 10 seconds timeout
+    });
+</script>
+                
             </div>
         </section>
     </main>
