@@ -112,7 +112,7 @@
                 </div>
                 
                 <!-- FormSubmit.co Form -->
-                <form action="https://formsubmit.co/admin@no-illusion.com" method="POST" class="p-6 space-y-6">
+                <form action="https://formsubmit.co/admin@no-illusion.com" method="POST" class="p-6 space-y-6" id="contactForm">
                     <!-- FormSubmit.co Configuration -->
                     <input type="hidden" name="_subject" value="New Contact Form Submission - No Illusion">
                     <input type="hidden" name="_template" value="table">
@@ -138,11 +138,31 @@
                     </div>
                     
                     <div>
-                        <button type="submit" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        <button type="submit" id="submitButton" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                             Submit
                         </button>
                     </div>
+                    
+                    <!-- Notification for first-time users -->
+                    <div class="mt-4 p-4 bg-blue-900/20 border border-blue-700/30 rounded-md text-sm">
+                        <p class="text-blue-200">Note: If this is your first time using the form, you may need to check your email to confirm your FormSubmit.co account. The page may redirect after submission.</p>
+                    </div>
                 </form>
+                
+                <script>
+                    // Add loading state to submit button
+                    document.getElementById('contactForm').addEventListener('submit', function() {
+                        const button = document.getElementById('submitButton');
+                        button.innerHTML = 'Sending...';
+                        button.disabled = true;
+                        
+                        // Re-enable button after 8 seconds in case of issues
+                        setTimeout(function() {
+                            button.innerHTML = 'Submit';
+                            button.disabled = false;
+                        }, 8000);
+                    });
+                </script>
             </div>
         </section>
     </main>
