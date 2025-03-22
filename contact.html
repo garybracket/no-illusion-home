@@ -118,7 +118,8 @@
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_next" value="https://no-illusion.com/thank-you.html">
+                    <input type="hidden" name="_next" value="/thank-you.html">
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting No Illusion. Your message has been received and I'll respond within 24-48 hours.">
                     
                     <!-- Form Fields -->
                     <div>
@@ -143,26 +144,21 @@
                         </button>
                     </div>
                     
-                    <!-- Notification for first-time users -->
-                    <div class="mt-4 p-4 bg-blue-900/20 border border-blue-700/30 rounded-md text-sm">
-                        <p class="text-blue-200">Note: If this is your first time using the form, you may need to check your email to confirm your FormSubmit.co account. The page may redirect after submission.</p>
-                    </div>
+                    <!-- Loading state handling -->
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', function() {
+                            const button = document.getElementById('submitButton');
+                            button.innerHTML = 'Sending...';
+                            button.disabled = true;
+                            
+                            // Re-enable button after 8 seconds in case of issues
+                            setTimeout(function() {
+                                button.innerHTML = 'Submit';
+                                button.disabled = false;
+                            }, 8000);
+                        });
+                    </script>
                 </form>
-                
-                <script>
-                    // Add loading state to submit button
-                    document.getElementById('contactForm').addEventListener('submit', function() {
-                        const button = document.getElementById('submitButton');
-                        button.innerHTML = 'Sending...';
-                        button.disabled = true;
-                        
-                        // Re-enable button after 8 seconds in case of issues
-                        setTimeout(function() {
-                            button.innerHTML = 'Submit';
-                            button.disabled = false;
-                        }, 8000);
-                    });
-                </script>
             </div>
         </section>
     </main>
