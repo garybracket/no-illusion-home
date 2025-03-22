@@ -114,19 +114,11 @@
                
                
 
-<!-- Replace the form section in your contact.html file with this -->
-
-<form action="https://formsubmit.co/admin@no-illusion.com" method="POST" class="p-6 space-y-6" id="contactForm">
-    <!-- FormSubmit.co Configuration -->
-    <input type="hidden" name="_subject" value="New Contact Form Submission - No Illusion">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
-    <input type="hidden" name="_api_key" value="null">
-    <input type="hidden" name="_webhook" value="">
+<!-- Contact Form - Using Getform.io -->
+<form action="https://getform.io/f/byvkmqza" method="POST" class="p-6 space-y-6" id="contactForm">
+    <!-- Anti-spam honeypot field -->
+    <input type="text" name="_gotcha" style="display:none">
     
-    <!-- Form Fields -->
     <div>
         <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
         <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
@@ -150,17 +142,18 @@
     </div>
     
     <div class="mt-4 p-4 bg-amber-900/20 border border-amber-700/30 rounded-md">
-        <p class="text-amber-200 text-sm">Note: If the form submission doesn't work, you can also email me directly at <a href="mailto:admin@no-illusion.com" class="text-primary underline">admin@no-illusion.com</a></p>
+        <p class="text-amber-200 text-sm">Note: If you have any issues with the form, you can also email me directly at <a href="mailto:admin@no-illusion.com" class="text-primary underline">admin@no-illusion.com</a></p>
     </div>
 </form>
 
-<!-- Add this script to handle form submission -->
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         // Show loading state
         const button = document.getElementById('submitButton');
         button.innerHTML = 'Sending...';
         button.disabled = true;
+        
+        // We won't prevent default form submission since we want the regular form submit to happen
         
         // Set a timeout to reset the button if the form hangs
         setTimeout(function() {
