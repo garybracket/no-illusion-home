@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Illusion - Thank You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa500',
+                        'dark': '#1d1d1d',
+                        'darker': '#121212',
+                        'card': '#222222',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <header class="bg-black py-4 shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">No Illusion</div>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Services</a></li>
+                    <li><a href="who_am_i.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Who Am I?</a></li>
+                    <li><a href="contact.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 flex flex-col items-center justify-center">
+        <div class="max-w-lg w-full bg-card rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-gradient-to-r from-green-900/40 to-green-800/30 p-6 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-green-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <h2 class="text-2xl font-bold text-primary mb-2">Thank You!</h2>
+                <p class="text-gray-300">Your message has been sent successfully.</p>
+            </div>
+            
+            <div class="p-6 space-y-6 text-center">
+                <p class="text-gray-300">I appreciate you taking the time to reach out. I'll review your message and get back to you as soon as possible.</p>
+                <p class="text-gray-300">Please allow 24-48 hours for a response during business days.</p>
+                
+                <div class="pt-4">
+                    <a href="index.html" class="inline-block bg-primary hover:bg-amber-600 text-black font-medium py-2 px-6 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Return to Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-4 text-center text-sm text-gray-400">
+        <p>&copy; 2024 No Illusion All rights reserved.</p>
+    </footer>
+</body>
+</html>
