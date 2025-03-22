@@ -103,7 +103,7 @@
             </div>
         </section>
         
-        <!-- Contact Form - Using FormSubmit.co -->
+        <!-- Contact Form Section -->
         <section class="mb-12">
             <div class="max-w-lg mx-auto bg-card rounded-lg shadow-lg overflow-hidden">
                 <div class="bg-gradient-to-r from-amber-900/40 to-amber-800/30 p-6">
@@ -111,60 +111,143 @@
                     <p class="text-gray-300">I&apos;m here to help with your technology needs</p>
                 </div>
                 
-               
-               
-
-<!-- Contact Form - Using Getform.io -->
-<form action="https://getform.io/f/byvkmqza" method="POST" class="p-6 space-y-6" id="contactForm">
-  <!-- Anti-spam honeypot field -->
-  <input type="text" name="_gotcha" style="display:none">
-  <!-- Redirect to custom thank you page -->
-  <input type="hidden" name="_redirect" value="https://no-illusion.com/thank-you.html">
-    
-    <div>
-        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-        <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
-    </div>
-    
-    <div>
-        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-        <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
-    </div>
-    
-    <div>
-        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Description (max 5000 characters)</label>
-        <p class="text-xs text-gray-400 mb-2">What exactly do you need or want done? What is your estimated budget? Do you need a product, or do you need general consulting?</p>
-        <textarea id="message" name="message" rows="6" maxlength="5000" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"></textarea>
-    </div>
-    
-    <div>
-        <button type="submit" id="submitButton" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-            Submit
-        </button>
-    </div>
-    
-    <div class="mt-4 p-4 bg-amber-900/20 border border-amber-700/30 rounded-md">
-        <p class="text-amber-200 text-sm">Note: If you have any issues with the form, you can also email me directly at <a href="mailto:admin@no-illusion.com" class="text-primary underline">admin@no-illusion.com</a></p>
-    </div>
-</form>
-
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        // Show loading state
-        const button = document.getElementById('submitButton');
-        button.innerHTML = 'Sending...';
-        button.disabled = true;
-        
-        // We won't prevent default form submission since we want the regular form submit to happen
-        
-        // Set a timeout to reset the button if the form hangs
-        setTimeout(function() {
-            button.innerHTML = 'Submit';
-            button.disabled = false;
-        }, 10000); // 10 seconds timeout
-    });
-</script>
+                <!-- Contact Form with AJAX submission -->
+                <div id="formContainer">
+                    <form id="contactForm" class="p-6 space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Description (max 5000 characters)</label>
+                            <p class="text-xs text-gray-400 mb-2">What exactly do you need or want done? What is your estimated budget? Do you need a product, or do you need general consulting?</p>
+                            <textarea id="message" name="message" rows="6" maxlength="5000" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="button" id="submitButton" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                                Submit
+                            </button>
+                        </div>
+                        
+                        <div class="mt-4 p-4 bg-amber-900/20 border border-amber-700/30 rounded-md">
+                            <p class="text-amber-200 text-sm">Note: If you have any issues with the form, you can also email me directly at <a href="mailto:admin@no-illusion.com" class="text-primary underline">admin@no-illusion.com</a></p>
+                        </div>
+                    </form>
+                </div>
                 
+                <!-- Success message (hidden initially) -->
+                <div id="successMessage" class="hidden p-8 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-green-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-primary mb-4">Thank You!</h3>
+                    <p class="text-gray-300 mb-4">Your message has been sent successfully. I'll review it and get back to you as soon as possible.</p>
+                    <button id="sendAnotherButton" class="bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300">
+                        Send Another Message
+                    </button>
+                </div>
+                
+                <!-- Error message (hidden initially) -->
+                <div id="errorMessage" class="hidden p-8 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-red-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-red-500 mb-4">Oops! Something went wrong</h3>
+                    <p class="text-gray-300 mb-4">There was a problem sending your message. Please try again or contact me directly.</p>
+                    <button id="tryAgainButton" class="bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300">
+                        Try Again
+                    </button>
+                </div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const formContainer = document.getElementById('formContainer');
+                        const successMessage = document.getElementById('successMessage');
+                        const errorMessage = document.getElementById('errorMessage');
+                        const submitButton = document.getElementById('submitButton');
+                        const sendAnotherButton = document.getElementById('sendAnotherButton');
+                        const tryAgainButton = document.getElementById('tryAgainButton');
+                        
+                        // Submit form with AJAX
+                        submitButton.addEventListener('click', function() {
+                            // Get form values
+                            const name = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const message = document.getElementById('message').value;
+                            
+                            // Validate form
+                            if (!name || !email || !message) {
+                                alert('Please fill out all fields');
+                                return;
+                            }
+                            
+                            // Show loading state
+                            submitButton.innerHTML = 'Sending...';
+                            submitButton.disabled = true;
+                            
+                            // Create form data for submission
+                            const formData = new FormData();
+                            formData.append('name', name);
+                            formData.append('email', email);
+                            formData.append('message', message);
+                            
+                            // Add honeypot field for spam protection
+                            formData.append('_gotcha', '');
+                            
+                            // Submit the form using fetch
+                            fetch('https://getform.io/f/byvkmqza', {
+                                method: 'POST',
+                                body: formData,
+                                headers: {
+                                    'Accept': 'application/json'
+                                }
+                            })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Show success message
+                                    formContainer.classList.add('hidden');
+                                    successMessage.classList.remove('hidden');
+                                    errorMessage.classList.add('hidden');
+                                } else {
+                                    throw new Error('Form submission failed');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                // Show error message
+                                formContainer.classList.add('hidden');
+                                successMessage.classList.add('hidden');
+                                errorMessage.classList.remove('hidden');
+                                
+                                // Reset button state
+                                submitButton.innerHTML = 'Submit';
+                                submitButton.disabled = false;
+                            });
+                        });
+                        
+                        // Reset form for another submission
+                        sendAnotherButton.addEventListener('click', function() {
+                            formContainer.classList.remove('hidden');
+                            successMessage.classList.add('hidden');
+                            document.getElementById('contactForm').reset();
+                            submitButton.innerHTML = 'Submit';
+                            submitButton.disabled = false;
+                        });
+                        
+                        // Try again after error
+                        tryAgainButton.addEventListener('click', function() {
+                            formContainer.classList.remove('hidden');
+                            errorMessage.classList.add('hidden');
+                        });
+                    });
+                </script>
             </div>
         </section>
     </main>
