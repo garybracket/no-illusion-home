@@ -4,53 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Illusion - Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa500',
+                        'dark': '#1d1d1d',
+                        'darker': '#121212',
+                        'card': '#222222',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Services</a></li>
-                <li><a href="who_am_i.html">Who Am I?</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <header class="bg-black py-4 shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">No Illusion</div>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Services</a></li>
+                    <li><a href="who_am_i.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Who Am I?</a></li>
+                    <li><a href="contact.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h1 class="site-notification">Site Under Reconstruction: Built originally in plain HTML/CSS but transitioning to Ruby on Rails for future functionality. This site will remain live as the Ruby app is being developed and upgraded.</h1>
-        <br>
-        <br>
-        <h1 class="site-notification">**You can also contact me by text or leave a voice message at  <number>.**</h1>
-        <br>
-        <br>
-        <h1 class="site-notification">**You can also contact me via email at admin@no-illusion.com or info@no-illusion.com with questions, concerns, pricing information, or requests.**</h1>
-        <br>
-        <br>
-        <h1 class="site-notification">**This form will NOT email me automatically until it is hooked into a web application. It will open your default mail app on your device to email me the information you put in to send the email manually, so make sure you choose your email app when asked how to open the link. This will be updated and changed in the near future.**</h1>
-        <br>
-        <br>
-        <h1 class="site-notification">As the site is still being built and upgraded, there is currently no way to choose from a dropdown menu for instance, but this functionality is coming where services will be separated in their own categories. You can use this form to provide all the details you have about a project. Do you need something specific? Are you looking for guidance? Do you need monthly maintenance, upgrades, or more than a one-time project? Provide as much of this as you can. *If you have a business idea, do not provide specific details about the idea without an NDA signed. For instance, if your idea was a social media type site, don't provide details about exactly how it works, but provide key details such as "the database needs users, and the users need posts" etc. Once an NDA is signed, this can be discussed in a meeting instead. The Contact page will allow you to submit information.*</h1>.</h1>
-        <section id="service">
-          <h1>Contact Me</h1>
-            <form action="mailto:admin@no-illusion.com" method="post">
-                <label for="name"> Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="description">Description (What exactly do you need or want done? What is your estimated budget? Do you need a product, or do you need general consulting? Etc. etc. max 5000 characters):</label>
-                <textarea id="description" name="description" rows="5" maxlength="5000" required></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-card rounded-lg p-4 mb-8 border-l-4 border-primary">
+            <h2 class="text-red-500 text-lg font-semibold mb-4">Site Under Reconstruction</h2>
+            <p class="text-gray-300">Built originally in plain HTML/CSS but transitioning to Ruby on Rails for future functionality. This site will remain live as the Ruby app is being developed and upgraded.</p>
+        </div>
+        
+        <!-- Contact Information Section -->
+        <section class="mb-8">
+            <div class="max-w-3xl mx-auto">
+                <div class="grid gap-6 md:grid-cols-2">
+                    <!-- Direct Contact -->
+                    <div class="bg-card rounded-lg shadow-lg p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">Direct Contact</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <a href="mailto:admin@no-illusion.com" class="text-primary hover:underline">admin@no-illusion.com</a>
+                                    <p class="text-sm text-gray-400 mt-1">or <a href="mailto:info@no-illusion.com" class="text-primary hover:underline">info@no-illusion.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <div>
+                                    <p class="font-medium">Phone</p>
+                                    <p class="text-gray-300">Text or leave a voice message</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Options -->
+                    <div class="bg-card rounded-lg shadow-lg p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">Contact Options</h2>
+                        <div class="space-y-4 text-gray-300">
+                            <p>You can reach me using the contact form below, which will send your message directly to my inbox.</p>
+                            <p>For urgent matters, please use the email address provided or leave a message at the phone number.</p>
+                            <p>I typically respond to all inquiries within 24-48 hours during business days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <footer>
-            <p>&copy; 2024 No Illusion All rights reserved.</p>
-        </footer>
+        
+        <!-- Project Requirements Notice -->
+        <section class="mb-8">
+            <div class="max-w-3xl mx-auto bg-card rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-primary mb-4">Project Details</h2>
+                <p class="text-gray-300 mb-4">As the site is still being built and upgraded, there is currently no way to choose from a dropdown menu for instance, but this functionality is coming where services will be separated in their own categories.</p>
+                <p class="text-gray-300 mb-4">You can use this form to provide all the details you have about a project:</p>
+                <ul class="list-disc pl-6 text-gray-300 mb-4 space-y-2">
+                    <li>Do you need something specific?</li>
+                    <li>Are you looking for guidance?</li>
+                    <li>Do you need monthly maintenance, upgrades, or more than a one-time project?</li>
+                </ul>
+                <p class="text-gray-300 font-medium">Provide as much of this information as you can.</p>
+                <div class="mt-4 p-4 bg-amber-900/20 border border-amber-700/30 rounded-md">
+                    <p class="text-amber-200 font-medium">Important:</p>
+                    <p class="text-amber-200 mt-2">If you have a business idea, do not provide specific details about the idea without an NDA signed. For instance, if your idea was a social media type site, don&apos;t provide details about exactly how it works, but provide key details such as &quot;the database needs users, and the users need posts&quot; etc. Once an NDA is signed, this can be discussed in a meeting instead.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form - Using FormSubmit.co -->
+        <section class="mb-12">
+            <div class="max-w-lg mx-auto bg-card rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-amber-900/40 to-amber-800/30 p-6">
+                    <h2 class="text-2xl font-bold text-primary mb-2">Contact Me</h2>
+                    <p class="text-gray-300">I&apos;m here to help with your technology needs</p>
+                </div>
+                
+                <!-- FormSubmit.co Form -->
+                <form action="https://formsubmit.co/admin@no-illusion.com" method="POST" class="p-6 space-y-6">
+                    <!-- FormSubmit.co Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - No Illusion">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_next" value="https://no-illusion.com/thank-you.html">
+                    
+                    <!-- Form Fields -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Description (max 5000 characters)</label>
+                        <p class="text-xs text-gray-400 mb-2">What exactly do you need or want done? What is your estimated budget? Do you need a product, or do you need general consulting?</p>
+                        <textarea id="message" name="message" rows="6" maxlength="5000" required class="w-full px-4 py-2 bg-darker border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="w-full bg-primary hover:bg-amber-600 text-black font-medium py-2 px-4 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
-
+    <footer class="bg-black py-4 text-center text-sm text-gray-400">
+        <p>&copy; 2024 No Illusion All rights reserved.</p>
+    </footer>
 </body>
 </html>

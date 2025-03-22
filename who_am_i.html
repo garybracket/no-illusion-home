@@ -1,226 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>No Illusion - Who Am I?</title>
-      <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Services</a></li>
-                <li><a href="who_am_i.html">Who Am I?</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Illusion - Who Am I?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa500',
+                        'dark': '#1d1d1d',
+                        'darker': '#121212',
+                        'card': '#222222',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <header class="bg-black py-4 shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">No Illusion</div>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Services</a></li>
+                    <li><a href="who_am_i.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Who Am I?</a></li>
+                    <li><a href="contact.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <h1 class="site-notification">Site Under Reconstruction: Built originally in plain HTML/CSS but transitioning to Ruby on Rails for future functionality. This site will remain live as the Ruby app is being developed and upgraded.
-        <br>
-        <br>
-          * Note: If you have any questions, queries, or want to setup a meeting, please see the Contact page or email admin@no-illusion.com *
-        <br>
-      </h1>
-      <section id="services">
-        <h1>About Me</h1>
-        <p>This text is only here until I have time to write a biography, but in the mean-time, I can just kind of paste my skills matrix from my LinkedIn profile here. Estimated Skill Level 1-5 (1; little experience, 5; mastered or close). This table is at the bottom of the QA.</p>
-        
-      </section>
-      <section id="services">
-        <h1>Quick Questions 'n' Answers</h1>
-        
-        <div class="service">
-          <h2>Question: Why is this site so simple?</h2>
-          <p>Answer: I believe less is more, especially when the goal is to provide information, rather than any kind of complex functionality. Therefore, I built this in a couple hours just to get it up and running while I upgrade it. It does help to know your terminology and how to use AI prompts effectively. It also helps to already know how to code!</p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: So what can you do for me or my business?</h2>
-          <p>Answer: The answer to this is generally "well, what do you want me to do?" I have used many programming languages, a lot of software (both paid and free), consulted on a ton of projects, including providing advice on current software/hardware and better/cheaper/free alternatives!</p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: What's the deal with No Illusion?</h2>
-          <p>Answer: I conceptualized this business to learn new things, apply old things, and generally move forward in my career and life. The idea for No Illusion is that after working for small businesses, corporations, etc. I realized that the "software development", "website building", "app building", etc. businesses and services have become a predatory field that preys on uneducated managers, individuals, and small businesses! You can get a $50,000 quote for a small project, and you can get a $10,000 or even $5,000 dollar quote for the same or a similar project. There is really no consistency in this business, and a lot of companies have the tendency to include un-necesssary staff such as Project Managers, Testers, QA, etc. where-as one person (the primary developer) can actually complete all of this on their own. The entire concept behind No Illusion is that there are no games, no gimmicks, no tricks, and no manipulation. I do all of my work on my own, and typically use AI to find mistakes or help test, as AI is incapable of the entire cycle. As an added point, I've always felt developers and even standard help desk associates are unable to bridge the communication and patience gap between their skills/talents and older or less tech-savvy individuals. As you'll learn further down, I built my entire career off the concept of patience and helping non tech-savvy users navgiate technology.</p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: Why only websites, web apps, and not Android or iPhone apps?</h2>
-          <p>Answer: I simply do not have staff or time to learn the entire structure of developing Apps. I can write a basic Notes app in a day or so, but complex functionality and logic would require a lot more education and I do work a full-time job on the side of this business.</p>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-card rounded-lg p-4 mb-8 border-l-4 border-primary">
+            <h2 class="text-red-500 text-lg font-semibold mb-4">Site Under Reconstruction</h2>
+            <p class="text-gray-300">Built originally in plain HTML/CSS but transitioning to Ruby on Rails for future functionality. This site will remain live as the Ruby app is being developed and upgraded.</p>
+            <p class="mt-4 text-gray-300">If you have any questions, queries, or want to setup a meeting, please see the Contact page or email <a href="mailto:admin@no-illusion.com" class="text-primary hover:underline">admin@no-illusion.com</a></p>
         </div>
 
-        <div class="service">
-          <h2>Question: Will all websites and apps be as ugly as this or one of your other demo apps?</h2>
-          <p>  Answer: Maybe. Functionality over Form is how I think. Design and front-end work is, in my opinion, one of the bigger sunken costs of development. Value-wise, I think you want the application to function the way it is intended to first, then worry about the aesthetics and how it looks after. For a lot of individuals and small businesses without investment / funding, this can get you a minimum viable product for half or less than the cost of a pretty product. I will eventually put up some updated Ruby on Rails web apps I've created on their own page for you to browse and take a look at. </p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: What is your experience?</h2>
-          <p>Answer: Officially, I have an Associates Degree in Computer Information Systems with a focus in programming, along with a 3.9~ GPA. I've also got 20+ years (I'm 34 now, but I started my journey building PCs as a young teenager) in both hardware and software. Adaptability has been my biggest strength, as I cannot remember the syntax of every programming language I've built in, but jumping right back in isn't a problem! I've built a lot of software over the years, built a lot of hardware over the years, and have done many hobby projects just to learn. As mentioned before, I am also a full-time IT Director and Engineer with a peculiar affinity for automating things, you tell me the problem, I'll find a way to automate the solution. I also worked on chat bots for a corporation or two! You can see more of my experience in various technologies in the skills matrix. </p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: If I want a consultation for moving forward with some technology, do you have to be the one to implement it?</h2>
-          <p>Answer: If you have an engineering team or technology team that has the skillset to implement the solution, then all you pay for is the consultation! </p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: So you are just getting started out on your own..will there be any discounts for early consumers? What about a senior/military/public servant discount?</h2>
-          <p> Answer: Once this site has been converted from a plain HTML/CSS website to a web app, I will be able to use a database to track users/consults/orders/payments and etc. so that I can actually track who is who and what is what. Yes, there will be at LEAST senior discounts, as the main reason I got into Technology at 12 was because my grandmother needed help with her first computer!</p>
-        </div>
-        
-        <div class="service">
-          <h2>Question: What are some examples of web apps you can make?</h2>
-          <p>Answer: You can use some examples of things you already know! For intance, do you or your company want your own mini-Twitter? Some sort of social media? Blog? Chatroom? User Portal? Healthcare Portal? Something for uploads/downloads? All of this? I don't use WordPress or site builders.. I always build from scratch so the functionality is exact. There are some occasions where it's a LOT cheaper to just use a website builder with your own custom domain (www.example.com), but I'd let you know when that's the case. Just need a 1 or 2 page static website for your small boat repair business? I can take care of that for you, or even show you how to do it yourself! I have no issue demonstrating and explaining upgrade/update processes for when the time comes, as some languages do need updated annually. </p>
-        </div>
-      </section>
-      <table>
-        <tr>
-          <th>Skill</th>
-          <th>Level</th>
-        </tr>
-        <tr>
-          <td>HTML / CSS</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>Bootstrap</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>C#</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Java</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>C++</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Asp.net</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Visual Basic 6</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Python</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Ruby</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Javascript</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>NodeJS</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Rails (Framework)</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Express (Framework)</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Powershell</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Bash / Linux</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Windows Shell</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>VBS</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>XML</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>JSON</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Access (Database)</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>MySQL (Database)</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>PostgreSQL (Database)</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Gherkin, Mini-test, and a couple others</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Selenium (web driver)</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Puppeteer (web driver)</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Git</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Docker</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Operating Systems</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>PC Software</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>PC Hardware</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>Network Fundamentals</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Anti-Virus / Anti-Malware / Firewalls</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Document Manipulation / Meta-Data / Scraping</td>
-          <td>3</td>
-        </tr>
-      </table>
-    <footer>
-        <p>&copy; 2024 No Illusion All rights reserved.</p>
-    </footer>
-  
+        <!-- About Me Section -->
+        <section class="mb-12">
+            <h1 class="text-3xl font-bold text-primary text-center mb-8">About Me</h1>
+            <div class="bg-card rounded-lg shadow-lg p-6 mb-12">
+                <p class="text-gray-300">This text is only here until I have time to write a biography, but in the mean-time, I can just kind of paste my skills matrix from my LinkedIn profile here. Estimated Skill Level 1-5 (1; little experience, 5; mastered or close). This table is at the bottom of the QA.</p>
+            </div>
+        </section>
+
+        <!-- Q&A Section -->
+        <section class="mb-12">
+            <h1 class="text-3xl font-bold text-primary text-center mb-8">Quick Questions 'n' Answers</h1>
+            
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="bg-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">Why is this site so simple?</h2>
+                        <p class="text-gray-300">I believe less is more, especially when the goal is to provide information, rather than any kind of complex functionality. Therefore, I built this in a couple hours just to get it up and running while I upgrade it. It does help to know your terminology and how to use AI prompts effectively. It also helps to already know how to code!</p>
+                    </div>
+                </div>
+                
+                <!-- Q2 -->
+                <div class="bg-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">So what can you do for me or my business?</h2>
+                        <p class="text-gray-300">The answer to this is generally "well, what do you want me to do?" I have used many programming languages, a lot of software (both paid and free), consulted on a ton of projects, including providing advice on current software/hardware and better/cheaper/free alternatives!</p>
+                    </div>
+                </div>
+                
+                <!-- Q3 -->
+                <div class="bg-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">What's the deal with No Illusion?</h2>
+                        <p class="text-gray-300">I conceptualized this business to learn new things, apply old things, and generally move forward in my career and life. The idea for No Illusion is that after working for small businesses, corporations, etc. I realized that the "software development", "website building", "app building", etc. businesses and services have become a predatory field that preys on uneducated managers, individuals, and small businesses!</p>
+                        <p class="text-gray-300 mt-4">You can get a $50,000 quote for a small project, and you can get a $10,000 or even $5,000 dollar quote for the same or a similar project. There is really no consistency in this business, and a lot of companies have the tendency to include un-necesssary staff such as Project Managers, Testers, QA, etc. where-as one person (the primary developer) can actually complete all of this on their own.</p>
+                        <p class="text-gray-300 mt-4">The entire concept behind No Illusion is that there are no games, no gimmicks, no tricks, and no manipulation. I do all of my work on my own, and typically use AI to find mistakes or help test, as AI is incapable of the entire cycle. As an added point, I've always felt developers and even standard help desk associates are unable to bridge the communication and patience gap between their skills/talents and older or less tech-savvy individuals. As you'll learn further down, I built my entire career off the concept of patience and helping non tech-savvy users navgiate technology.</p>
+                    </div>
+                </div>
+                
+                <!-- Additional questions -->
+                <div class="bg-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">Why only websites, web apps, and not Android or iPhone apps?</h2>
+                        <p class="text-gray-300">I simply do not have staff or time to learn the entire structure of developing Apps. I can write a basic Notes app in a day or so, but complex functionality and logic would require a lot more education and I do work a full-time job on the side of this business.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">Will all websites and apps be as ugly as this or one of your other demo apps?</h2>
+                        <p class="text-gray-300">Maybe. Functionality over Form is how I think. Design and front-end work is, in my opinion, one of the bigger sunken costs of development. Value-wise, I think you want the application to function the way it is intended to first, then worry about the aesthetics and how it looks after. For a lot of individuals and small businesses without investment / funding, this can get you a minimum viable product for half or less than the cost of a pretty product. I will eventually put up some updated Ruby on Rails web apps I've created on their own page for you to browse and take a look at.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-card rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-primary mb-4">What is your experience?</h2>
+                        <p class="text-gray-300">Officially, I have an Associates Degree in Computer Information Systems with a focus in programming, along with a 3.9~ GPA. I've also got 20+ years (I'm 34 now, but I started my journey building PCs as a young teenager) in both hardware and software. Adaptability has been my biggest strength, as I cannot remember the syntax of every programming language I've built in, but jumping right back in isn't a problem!</p>
+                        <p class="text-gray-300 mt-4">I've built a lot of software over the years, built a lot of hardware over the years, and have done many hobby projects just to learn. As mentioned before, I am also a full-time IT Director and Engineer with a peculiar affinity for automating things, you tell me the problem, I'll find a way to automate the solution. I also worked on chat bots for a corporation or two! You can see more of my experience in various technologies in the skills matrix.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-primary text-center mb-8 relative">
+                <span class="bg-dark px-4 relative z-10">Skills Matrix</span>
+                <div class="absolute top-1/2 w-full h-px bg-gray-700 -z-0"></div>
+            </h2>
+            
+            <div class="overflow-x-auto bg-card rounded-lg shadow-lg">
+                <table class="min-w-full">
+                    <thead>
+                        <tr>
+                            <th class="px-6 py-3 text-left text-primary font-medium tracking-wider">Skill</th>
+                            <th class="px-6 py-3 text-left text-primary font-medium tracking-wider">Level</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-700">
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">HTML / CSS</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">Bootstrap</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">C#</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-gray-600 rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-gray-600 rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">Ruby</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-gray-600 rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-gray-600 rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">Powershell</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-gray-600 rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">Operating Systems</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-800">
+                            <td class="px-6 py-4 whitespace-nowrap">PC Hardware</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex">
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full mr-1"></div>
+                                    <div class="h-2 w-8 bg-primary rounded-full"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Add more skills as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
-    
-  </body>
+    <footer class="bg-black py-4 text-center text-sm text-gray-400">
+        <p>&copy; 2024 No Illusion All rights reserved.</p>
+    </footer>
+</body>
 </html>

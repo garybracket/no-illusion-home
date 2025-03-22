@@ -4,101 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Illusion - Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ffa500',
+                        'dark': '#1d1d1d',
+                        'darker': '#121212',
+                        'card': '#222222',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
- 
-    <header>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-item">Services</a></li>
-                <li><a href="who_am_i.html" class="nav-item">Who Am I?</a></li>
-                <li><a href="contact.html" class="nav-item">Contact</a></li>
-            </ul>
-           
-        </nav>
+<body class="bg-dark text-white min-h-screen flex flex-col">
+    <header class="bg-black py-4 shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">No Illusion</div>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Services</a></li>
+                    <li><a href="who_am_i.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Who Am I?</a></li>
+                    <li><a href="contact.html" class="bg-card px-4 py-2 rounded-full text-white hover:bg-gray-700 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <h1 class="site-notification">Site Under Reconstruction: Built originally in plain HTML/CSS but transitioning to Ruby on Rails for future functionality. This site will remain live as the Ruby app is being developed and upgraded.
-      <br>
-      <br>
-        * Note: If you have any questions, queries, or want to setup a meeting, please see the Contact page or email admin@no-illusion.com *
-      <br>
-      <br>
-        * Note: If you need monthly updates, configuration help, help acquiring a domain/site URL, SSL, etc. for your existing platform or sites, please contact me and let me know exaclty what you need. You can text or leave a voice message at  <number>  *
-      <br>
-      </h1>
-    
-        <!-- Services Section -->
-          <section id="services">
-          
-      
-      <!-- Software Services -->
-      <div class="service-category">
-        <h2>Software Services</h2>
-        <!-- Application Consultation -->
-        <div class="service">
-          <h3>Application Consultation</h3>
-          <p>Already have a website or application and need assistance with it? Are you unsure about which applications would best suit your needs? With my application consultation service, I provide expert guidance tailored to your requirements. Whether you're a small business looking for productivity software or an individual seeking specialized applications, I analyze your needs and recommend the most suitable solutions to optimize your workflow and productivity.</p>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-card rounded-lg p-4 mb-8 border-l-4 border-primary">
+            <h2 class="text-red-500 text-lg font-semibold mb-4">Site Under Reconstruction</h2>
+            <p class="text-gray-300">Built originally in plain HTML/CSS but transitioning to Ruby on Rails for future functionality. This site will remain live as the Ruby app is being developed and upgraded.</p>
+            <p class="mt-4 text-gray-300">If you have any questions, queries, or want to setup a meeting, please see the Contact page or email <a href="mailto:admin@no-illusion.com" class="text-primary hover:underline">admin@no-illusion.com</a></p>
+            <p class="mt-4 text-gray-300">If you need monthly updates, configuration help, help acquiring a domain/site URL, SSL, etc. for your existing platform or sites, please contact me and let me know exactly what you need.</p>
         </div>
-        <!-- Reformat Drives or Reload/Rebuild Computer Software -->
-        <div class="service">
-          <h3>Reformat Drives or Reload/Rebuild Computer Software</h3>
-          <p>Need a fresh start for your computer? My reformat drives or reload/rebuild computer software service ensures that your system operates smoothly and efficiently. Whether you're experiencing performance issues or want to start afresh, I handle the process meticulously, ensuring all your data is safely backed up and restored as necessary.</p>
-        </div>
-        <!-- General Software Consultations -->
-        <div class="service">
-          <h3>General Software Consultations</h3>
-          <p>Struggling with software choices or compatibility issues? My general software consultations offer comprehensive advice and solutions to address your software-related challenges. Whether it's selecting the right software for your business needs or troubleshooting existing software problems, I provide expert guidance to ensure optimal performance and efficiency.</p>
-        </div>
-        <!-- Software Consulting for Open Source or Other Useful Softwares -->
-        <div class="service">
-          <h3>Software Consulting for Open Source or Other Useful Softwares</h3>
-          <p>Interested in exploring open-source or niche software solutions? My software consulting service offers insights and recommendations tailored to your specific requirements. Whether you're looking for cost-effective alternatives or specialized tools, I leverage my expertise to guide you through the selection process, ensuring you find the perfect software solutions to meet your needs.</p>
-        </div>
-      </div>
-      
-      <!-- Hardware Services -->
-      <div class="service-category">
-        <h2>Hardware Services</h2>
-        <!-- PC Installation -->
-        <div class="service">
-          <h3>PC Installation</h3>
-          <p>As a one-man company, I specialize in providing seamless PC installation services, ensuring that your systems are set up efficiently and effectively. Whether you're a business in need of multiple workstations or an individual seeking to upgrade your home office, I handle the entire installation process with precision and care, guaranteeing optimal performance from the get-go.</p>
-        </div>
-        <!-- Network Installation and Configuration -->
-        <div class="service">
-          <h3>Network Installation and Configuration</h3>
-          <p>My expertise extends to comprehensive network installation and configuration services, tailored to meet the unique needs of your business or personal requirements. From setting up routers and switches to configuring network protocols and security measures, I ensure that your network infrastructure is robust, secure, and optimized for smooth operation.</p>
-        </div>
-        <!-- General IT Consultations and Troubleshooting -->
-        <div class="service">
-          <h3>General IT Consultations and Troubleshooting</h3>
-          <p>Count on me for reliable IT consultations and troubleshooting support, where I offer expert guidance and solutions to address a wide range of technical challenges. Whether you're grappling with software issues, hardware malfunctions, or seeking advice on IT best practices, I am equipped to provide personalized assistance and recommendations to keep your systems running smoothly.</p>
-        </div>
-        <!-- Custom-built PCs and Other Computer Systems -->
-        <div class="service">
-          <h3>Custom-built PCs and Other Computer Systems</h3>
-          <p>Looking for tailor-made computer systems designed to meet your specific requirements? Look no further. I specialize in crafting custom-built PCs and other computer systems, leveraging my expertise to assemble high-performance machines optimized for your needs, whether it's for gaming, content creation, or professional applications.</p>
-        </div>
-        <!-- Upgrades for PCs -->
-        <div class="service">
-          <h3>Upgrades for PCs</h3>
-          <p>Stay up-to-date and maximize the performance of your existing PC systems with my comprehensive upgrade services. Whether you're looking to boost processing power, enhance storage capacity, or upgrade graphics capabilities, I offer expert advice and seamless upgrade solutions to ensure that your PCs remain at the forefront of technology.</p>
-        </div>
-  
-         <!-- Video Game Console Modding Consultations -->
-         <div class="service">
-          <h3>Video Game Console Modding Consultations</h3>
-          <p>Stay up-to-date and maximize the performance of your existing PC systems with my comprehensive upgrade services. Whether you're looking to boost processing power, enhance storage capacity, or upgrade graphics capabilities, I offer expert advice and seamless upgrade solutions to ensure that your PCs remain at the forefront of technology.</p>
-        </div>
-      </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 No Illusion All rights reserved.</p>
-      </footer>
-  </main>
 
+        <!-- Services Section -->
+        <section id="services" class="mb-12">
+            <h1 class="text-3xl font-bold text-primary text-center mb-12">Our Services</h1>
+            
+            <!-- Software Services -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-semibold text-primary text-center mb-8 relative">
+                    <span class="bg-dark px-4 relative z-10">Software Services</span>
+                    <div class="absolute top-1/2 w-full h-px bg-gray-700 -z-0"></div>
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Application Consultation -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">Application Consultation</h3>
+                            <p class="text-gray-300">Already have a website or application and need assistance with it? Are you unsure about which applications would best suit your needs? With my application consultation service, I provide expert guidance tailored to your requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Reformat Drives -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">Reformat Drives or Reload/Rebuild Computer Software</h3>
+                            <p class="text-gray-300">Need a fresh start for your computer? My reformat drives or reload/rebuild computer software service ensures that your system operates smoothly and efficiently.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- General Software Consultations -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">General Software Consultations</h3>
+                            <p class="text-gray-300">Struggling with software choices or compatibility issues? My general software consultations offer comprehensive advice and solutions to address your software-related challenges.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Software Consulting for Open Source -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">Open Source Software Consulting</h3>
+                            <p class="text-gray-300">Interested in exploring open-source or niche software solutions? My software consulting service offers insights and recommendations tailored to your specific requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hardware Services -->
+            <div>
+                <h2 class="text-2xl font-semibold text-primary text-center mb-8 relative">
+                    <span class="bg-dark px-4 relative z-10">Hardware Services</span>
+                    <div class="absolute top-1/2 w-full h-px bg-gray-700 -z-0"></div>
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- PC Installation -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">PC Installation</h3>
+                            <p class="text-gray-300">As a one-man company, I specialize in providing seamless PC installation services, ensuring that your systems are set up efficiently and effectively.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Network Installation -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">Network Installation and Configuration</h3>
+                            <p class="text-gray-300">My expertise extends to comprehensive network installation and configuration services, tailored to meet the unique needs of your business or personal requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- General IT Consultations -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">IT Consultations and Troubleshooting</h3>
+                            <p class="text-gray-300">Count on me for reliable IT consultations and troubleshooting support, where I offer expert guidance and solutions to address a wide range of technical challenges.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom-built PCs -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">Custom-built PCs</h3>
+                            <p class="text-gray-300">Looking for tailor-made computer systems designed to meet your specific requirements? I specialize in crafting custom-built PCs and other computer systems.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Upgrades for PCs -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">PC Upgrades</h3>
+                            <p class="text-gray-300">Stay up-to-date and maximize the performance of your existing PC systems with my comprehensive upgrade services.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Game Console Modding -->
+                    <div class="bg-card rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-4">Console Modding Consultations</h3>
+                            <p class="text-gray-300">Interested in enhancing your gaming experience? I offer expert consultations on video game console modifications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-4 text-center text-sm text-gray-400">
+        <p>&copy; 2024 No Illusion All rights reserved.</p>
+    </footer>
 </body>
 </html>
